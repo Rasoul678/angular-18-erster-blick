@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CalculateReceiptComponent } from '../calculate-receipt/calculate-receipt.component';
 import { IngredientList } from '../ingredient-list/ingredient-list.component';
 import { SignUpForm } from '../sign-up-form/sign-up-form.component';
 import { TextTransformerComponent } from '../text-transformer/text-transformer.component';
@@ -14,6 +15,7 @@ import { UserControls } from '../user-controls/user-controls.component';
     SignUpForm,
     UserControls,
     IngredientList,
+    CalculateReceiptComponent,
   ],
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.css',

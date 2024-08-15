@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'text-transformer',
   standalone: true,
+  selector: 'text-transformer',
   imports: [],
   templateUrl: './text-transformer.component.html',
   styleUrl: './text-transformer.component.css',
