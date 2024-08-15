@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { CalculatorService } from '../../services/calculator/calculator.service';
 
 @Component({
@@ -11,5 +11,12 @@ import { CalculatorService } from '../../services/calculator/calculator.service'
 export class CalculateReceiptComponent {
   private calculatorService = inject(CalculatorService);
 
+  @Output() incrementCostEvent = new EventEmitter<number>();
+
   totalCost = this.calculatorService.add(50, 25);
+
+  onClick() {
+    this.totalCost++;
+    this.incrementCostEvent.emit(this.totalCost);
+  }
 }

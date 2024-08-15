@@ -20,4 +20,10 @@ import { UserControls } from '../user-controls/user-controls.component';
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.css',
 })
-export class TodoList {}
+export class TodoList {
+  cost = 0;
+
+  increment(newCost: number) {
+    this.cost = newCost;
+  }
+}

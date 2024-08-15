@@ -1,8 +1,10 @@
 <ul>
-  <todo-list-item></todo-list-item>
+  <todo-list-item />
 </ul>
-<sign-up-form></sign-up-form>
-<user-controls></user-controls>
+<h1>parent: Incremented Cost {{ cost }}</h1>
+<sign-up-form />
+<user-controls />
+<user-controls [isAdmin]="false" />
 <ingredient-list></ingredient-list>
 <text-transformer></text-transformer>
-<calculate-receipt></calculate-receipt>
+<calculate-receipt (incrementCostEvent)="increment($event)"></calculate-receipt>
