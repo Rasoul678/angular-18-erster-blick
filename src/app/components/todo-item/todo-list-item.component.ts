@@ -6,4 +6,15 @@ import { Component } from '@angular/core';
   templateUrl: './todo-list-item.component.html',
   styleUrl: './todo-list-item.component.css',
 })
-export class TodoListItem {}
+export class TodoListItem {
+  taskTitle = 'Read Angular Essentials Guide!';
+  isComplete = false;
+
+  completeTask() {
+    this.isComplete = true;
+  }
+
+  updateTaskTitle(newTitle: string) {
+    this.taskTitle = newTitle;
+  }
+}
