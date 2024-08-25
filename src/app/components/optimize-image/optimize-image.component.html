@@ -1,0 +1,13 @@
+<p>optimize-image works!</p>
+<li>
+  Static Image:
+  <img
+    ngSrc="/assets/angular-logo.svg"
+    alt="Angular logo"
+    width="100"
+    height="100" />
+</li>
+<li>
+  Dynamic Image:
+  <img [ngSrc]="logoUrl" alt="Angular logo" width="100" height="100" priority />
+</li>
