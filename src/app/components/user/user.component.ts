@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { UserService } from '../../services/user/user.service';
 
 @Component({
   selector: 'app-user',
@@ -11,6 +12,13 @@ import { FormsModule } from '@angular/forms';
 export class UserComponent {
   username = 'Rasoul';
   favoriteFramework = '';
+  display = '';
+
+  constructor() {
+    this.display = this.userService.getUsers().join(' ⭐️ ');
+  }
+
+  userService = inject(UserService);
 
   showFramework() {
     alert(this.favoriteFramework);
