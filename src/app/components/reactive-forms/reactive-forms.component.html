@@ -11,5 +11,5 @@
     >Email
     <input type="email" aria-label="email" formControlName="email" />
   </label>
-  <button type="submit">Submit</button>
+  <button type="submit" [disabled]="!myForm.valid">Submit</button>
 </form>
