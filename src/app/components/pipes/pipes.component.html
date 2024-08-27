@@ -1,3 +1,7 @@
 <p>pipes works!</p>
 <p>{{ loudMessage | uppercase }}</p>
 <p>{{ username | lowercase }}</p>
+<p>My Birthday: {{ birthday | date : 'medium' }}</p>
+
+<p>Number with "decimal" {{ number | number : '3.2-2' }}</p>
+<p>Currency with "currency" {{ cost | currency }}</p>
