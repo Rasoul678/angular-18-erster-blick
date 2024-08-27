@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CarService } from '../../services/car/car.service';
 import { UserService } from '../../services/user/user.service';
 
 @Component({
@@ -12,10 +13,12 @@ import { UserService } from '../../services/user/user.service';
 export class UserComponent {
   username = 'Rasoul';
   favoriteFramework = '';
-  display = '';
+  usersDisplay = '';
+  carsDisplay = '';
 
-  constructor() {
-    this.display = this.userService.getUsers().join(' ⭐️ ');
+  constructor(private carService: CarService) {
+    this.usersDisplay = this.userService.getUsers().join(' ⭐️ ');
+    this.carsDisplay = this.carService.getCars().join(' ⭐️ ');
   }
 
   userService = inject(UserService);
