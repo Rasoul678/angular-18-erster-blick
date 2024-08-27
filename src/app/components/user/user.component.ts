@@ -11,4 +11,8 @@ import { FormsModule } from '@angular/forms';
 export class UserComponent {
   username = 'Rasoul';
   favoriteFramework = '';
+
+  showFramework() {
+    alert(this.favoriteFramework);
+  }
 }
