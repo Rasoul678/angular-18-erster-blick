@@ -3,6 +3,7 @@ import { DeferableComponent } from './components/deferable/deferable.component';
 import { HomeComponent } from './components/home/home.component';
 import { IngredientList } from './components/ingredient-list/ingredient-list.component';
 import { OptimizeImageComponent } from './components/optimize-image/optimize-image.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
 import { TextTransformerComponent } from './components/text-transformer/text-transformer.component';
 import { TodoList } from './components/todo-list/todo-list.component';
@@ -48,5 +49,10 @@ export const routes: Routes = [
     path: 'reactive-form',
     title: 'App Reactive Forms Page',
     component: ReactiveFormsComponent,
+  },
+  {
+    path: 'pipes',
+    title: 'App Pipes Page',
+    component: PipesComponent,
   },
 ];
